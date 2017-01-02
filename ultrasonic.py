@@ -2,6 +2,9 @@ import pins
 import time
 import RPi.GPIO as GPIO
 
+# Based on ModMyPi blog post:
+# https://www.modmypi.com/blog/hc-sr04-ultrasonic-range-sensor-on-the-raspberry-pi
+
 # Amount of time to make sure ultrasonic sensor trigger is held low before starting
 # Note: we may not actually need this
 SLEEP_TIME_BEFORE_START = 0.05
