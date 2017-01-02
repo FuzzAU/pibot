@@ -40,6 +40,8 @@ def get_distance():
     while GPIO.input(pins.ULTRASONIC_ECHO) == 0:
         if wait_count > 100000:
             working = False
+            break
+        wait_count += 1
         continue
 
     if not working:
@@ -53,6 +55,8 @@ def get_distance():
     while GPIO.input(pins.ULTRASONIC_ECHO) == 1:
         if wait_count > 100000:
             working = False
+            break
+        wait_count += 1
         continue
 
     if not working:

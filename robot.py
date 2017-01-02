@@ -23,10 +23,10 @@ try:
     while True:
         distance = ultrasonic.get_distance()
 
-        print('Distance [cm]: %f' % distance)
         # Check that the distance returned is valid. If distance returned is None
         # then we can't compare that to a number, so lets check that it's valid first
         if distance:
+            print('Distance [cm]: %f' % distance)
             if distance < 60:
                 GPIO.output(pins.GREEN_LED, True)
             else:
